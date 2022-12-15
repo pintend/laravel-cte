@@ -71,6 +71,7 @@ trait BuildsExpressionQueries
 
         switch ($driver) {
             case 'mysql':
+            case 'singlestore':
                 return new MySqlGrammar();
             case 'pgsql':
                 return new PostgresGrammar();

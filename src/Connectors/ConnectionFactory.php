@@ -32,6 +32,7 @@ class ConnectionFactory extends Base
 
         switch ($driver) {
             case 'mysql':
+            case 'singlestore':
                 return new MySqlConnection($connection, $database, $prefix, $config);
             case 'pgsql':
                 return new PostgresConnection($connection, $database, $prefix, $config);
